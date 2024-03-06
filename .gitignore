@@ -1,6 +1,7 @@
 .terraform/*
 *.tfstate
 *.tfstate.*
-*.tfvars*
+*.tfvars
+*.tfvars-v*
 main.tf-v*
 ./target/*
