@@ -94,14 +94,13 @@ resource "aws_security_group" "myapp-sg" {
 
 resource "aws_instance" "myapp-server" {
   #ami = "ami-0440d3b780d96b29d"
-  ami = var.ami-image.amazone_linux_2023
+  ami = var.ami-image.ubuntu
   instance_type = var.instance_type
   subnet_id = aws_subnet.myapp-subnet-1.id
   vpc_security_group_ids = [ aws_security_group.myapp-sg.id ]
   availability_zone = var.avail_zone[0]
   associate_public_ip_address = true
-  key_name = "ec2-ecr" # create pem key in portal and put in .ssh folder of your local PC(C:\Users\ashra\.ssh)
-  #and go to git bash or terminal (chmod a-w ec2-ecr.pem) or chmod 400 ec2-ecr.pem
+  key_name = "b80"
   for_each = toset([ var.instance_name[0], var.instance_name[1], var.instance_name[2] ])
   
   tags = {

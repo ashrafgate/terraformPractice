@@ -15,8 +15,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "b80-adv-terraform-bucket"
-    key    = "tfstate-current-state-file"
+    bucket = "b80-terraform-bucket"
+    key    = "tf-current-state-file"
     region = "us-east-1"
   }
 }
