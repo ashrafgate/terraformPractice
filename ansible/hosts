@@ -1,15 +1,15 @@
 [JenkinsControllerNode]
-10.1.1.42
+10.1.1.247
 
 [JenkinsControllerNode:vars]
 ansible_user=ubuntu
-ansible_ssh_private_key_file=/opt/b80.pem
+ansible_ssh_private_key_file=/opt/ec2-ecr.pem
 
 
 
 [JenkinsAgentNode]
-10.1.1.4
+10.1.1.172
 
 [JenkinsAgentNode:vars]
 ansible_user=ubuntu
-ansible_ssh_private_key_file=/opt/b80.pem
+ansible_ssh_private_key_file=/opt/ec2-ecr.pem

@@ -100,7 +100,7 @@ resource "aws_instance" "myapp-server" {
   vpc_security_group_ids = [ aws_security_group.myapp-sg.id ]
   availability_zone = var.avail_zone[0]
   associate_public_ip_address = true
-  key_name = "b80"
+  key_name = "ec2-ecr"
   for_each = toset([ var.instance_name[0], var.instance_name[1], var.instance_name[2] ])
   
   tags = {
